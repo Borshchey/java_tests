@@ -1,7 +1,5 @@
 package ru.stqa.pft;
 
-import java.sql.SQLOutput;
-
 public class MyFirstProgram {
     public static void main (String[] args) {
         Square s = new Square(5);
