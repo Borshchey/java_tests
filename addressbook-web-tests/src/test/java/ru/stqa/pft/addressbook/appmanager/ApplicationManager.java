@@ -47,6 +47,7 @@ public class ApplicationManager {
   }
 
   public void goToHome() {
+
     wd.findElement(By.linkText("home")).click();
   }
 
@@ -60,5 +61,9 @@ public class ApplicationManager {
 
   public ContactHelper getContactHelper() {
     return contactHelper;
+  }
+
+  public void skipAlert() {
+    wd.switchTo().alert().accept();
   }
 }
