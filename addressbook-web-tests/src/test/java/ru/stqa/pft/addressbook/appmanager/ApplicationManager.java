@@ -59,7 +59,9 @@ public class ApplicationManager {
   }
 
   public void goToHome() {
-
+    if (contactHelper.isElementPresent(By.id("maintable"))) {
+      return;
+    }
     wd.findElement(By.linkText("home")).click();
   }
 
