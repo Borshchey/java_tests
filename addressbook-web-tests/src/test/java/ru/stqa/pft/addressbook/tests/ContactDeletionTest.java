@@ -10,7 +10,7 @@ public class ContactDeletionTest extends TestBase{
   public void testContactDeletion() {
     app.goToHome();
     if (! app.getContactHelper().isThereAContact()){
-      app.getContactHelper().createContact(new ContactData("Borshch", "Elizaveta", "JustAI", "test@example.com", "test6"), true);
+      app.getContactHelper().createContact(new ContactData("Borshch", "Elizaveta", "JustAI", "test@example.com", "test2"), true);
 
     }
     List<ContactData> before = app.getContactHelper().getContactList();
@@ -23,9 +23,8 @@ public class ContactDeletionTest extends TestBase{
     Assert.assertEquals(after.size(), before.size() -1);
 
     before.remove(before.size() - 1);
-    for (int i = 0; i < after.size(); i++) {
-      Assert.assertEquals(before.get(i), after.get(i));
-    }
+    Assert.assertEquals(before, after);
+
   }
 
 }
