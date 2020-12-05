@@ -16,28 +16,23 @@ public class ContactHelper extends HelperBase {
   public ContactHelper(WebDriver wd) {
     super(wd);
   }
-
   public void submitContactCreation() {
     click(By.xpath("(//input[@name='submit'])[2]"));
   }
-
   public void fillContactForm(ContactData contactData, boolean creation) {
     type(By.name("firstname"), contactData.getFirstname());
     type(By.name("lastname"), contactData.getLastname());
     type(By.name("company"), contactData.getCompanyName());
     type(By.name("email"), contactData.getEmail());
-
     if (creation) {
       new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
     } else {
       Assert.assertFalse(isElementPresent(By.name("new_group")));
     }
   }
-
   public void addNewContact() {
     click(By.linkText("add new"));
   }
-
   public void editContact() {
     click(By.xpath("(//img[@alt='Edit'])"));
 
@@ -46,25 +41,20 @@ public class ContactHelper extends HelperBase {
   public void updateContact() {
     click(By.xpath("(//input[@name='update'])[2]"));
   }
-
   public void selectContact() {
     click(By.name("selected[]"));
   }
-
   public void deleteContact() {
     click(By.xpath("//input[@value='Delete']"));
   }
-
   public void createContact(ContactData contact, boolean creation) {
     addNewContact();
     fillContactForm(contact, creation);
     submitContactCreation();
   }
-
   public boolean isThereAContact() {
     return isElementPresent(By.name("selected[]"));
   }
-
   public int getContactCount() {
     return wd.findElements(By.name("selected[]")).size();
   }

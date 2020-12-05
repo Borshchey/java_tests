@@ -1,0 +1,87 @@
+package com.example.tests;
+
+import java.util.regex.Pattern;
+import java.util.concurrent.TimeUnit;
+import org.testng.annotations.*;
+import static org.testng.Assert.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class UntitledTestCase {
+  private WebDriver driver;
+  private String baseUrl;
+  private boolean acceptNextAlert = true;
+  private StringBuffer verificationErrors = new StringBuffer();
+
+  @BeforeClass(alwaysRun = true)
+  public void setUp() throws Exception {
+    driver = new FirefoxDriver();
+    baseUrl = "https://www.google.com/";
+    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  }
+
+  @Test
+  public void testUntitledTestCase() throws Exception {
+    driver.get("https://zb04.just-ai.com/e_borsch-247852676-zwZ/log-labeling");
+    driver.findElement(By.linkText("выберите файл")).click();
+    driver.findElement(By.xpath("(//button[@type='button'])[18]")).click();
+    driver.findElement(By.xpath("(//button[@type='button'])[7]")).click();
+    driver.findElement(By.xpath("(//button[@type='button'])[12]")).click();
+    driver.findElement(By.xpath("//button/span")).click();
+    driver.findElement(By.xpath("(//button[@type='button'])[13]")).click();
+    driver.findElement(By.xpath("(//button[@type='button'])[13]")).click();
+    driver.findElement(By.xpath("(//button[@type='button'])[14]")).click();
+    driver.findElement(By.cssSelector("svg.svg-inline--fa.fa-tag.fa-w-16.fa-sm.justui_icon.fa-color-info > path")).click();
+    driver.findElement(By.xpath("(//input[@value=''])[3]")).click();
+    driver.findElement(By.cssSelector("svg.svg-inline--fa.fa-search.fa-w-16.btn-icon.btn-color.justui_icon.fa-color-primary > path")).click();
+    driver.findElement(By.cssSelector("svg.svg-inline--fa.fa-times-circle.fa-w-16.btn-icon.btn-color.justui_icon.fa-color-secondary")).click();
+    driver.findElement(By.xpath("//div[@id='scrollableContainer']/div/div/div/div/div[2]/div/div[3]/div/div/span")).click();
+    driver.findElement(By.xpath("//div[@id='scrollableContainer']/div/div/div/div/div[2]/div/div[3]/div/div/span")).click();
+    driver.findElement(By.xpath("//div[@id='scrollableContainer']/div/div/div/div/div[2]/div[2]/div/div/div/label")).click();
+    driver.findElement(By.xpath("(//button[@type='button'])[12]")).click();
+    driver.findElement(By.xpath("//button/span")).click();
+  }
+
+  @AfterClass(alwaysRun = true)
+  public void tearDown() throws Exception {
+    driver.quit();
+    String verificationErrorString = verificationErrors.toString();
+    if (!"".equals(verificationErrorString)) {
+      fail(verificationErrorString);
+    }
+  }
+
+  private boolean isElementPresent(By by) {
+    try {
+      driver.findElement(by);
+      return true;
+    } catch (NoSuchElementException e) {
+      return false;
+    }
+  }
+
+  private boolean isAlertPresent() {
+    try {
+      driver.switchTo().alert();
+      return true;
+    } catch (NoAlertPresentException e) {
+      return false;
+    }
+  }
+
+  private String closeAlertAndGetItsText() {
+    try {
+      Alert alert = driver.switchTo().alert();
+      String alertText = alert.getText();
+      if (acceptNextAlert) {
+        alert.accept();
+      } else {
+        alert.dismiss();
+      }
+      return alertText;
+    } finally {
+      acceptNextAlert = true;
+    }
+  }
+}
