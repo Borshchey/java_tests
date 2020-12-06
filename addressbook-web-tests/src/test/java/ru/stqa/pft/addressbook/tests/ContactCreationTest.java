@@ -8,12 +8,17 @@ import java.util.List;
 
 public class ContactCreationTest extends TestBase{
 
-  @Test  (enabled = false)
+  @Test  (enabled = true)
   public void testContactCreation() throws Exception {
     app.goToHome();
     List<ContactData> before = app.contact().list();
     app.contact().addNewContact();
-    ContactData contact = new ContactData("Borshch", "Elizaveta", "JustAI", "test@example.com", "test2");
+    ContactData contact = new ContactData()
+            .withLastname("Borshch")
+            .withFirstname("Elizaveta")
+            .withCompanyName("JustAI")
+            .withEmail("test@example.com")
+            .withGroup("test2");
     app.contact().fillContactForm(contact, true);
     app.contact().submitContactCreation();
     app.goToHome();
