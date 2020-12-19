@@ -1,0 +1,82 @@
+<list>
+  <ru.stqa.pft.addressbook.model.GroupData>
+    <name>Group_Name 1</name>
+    <id>2147483647</id>
+    <header>Group_Header 
+1</header>
+    <footer>Group_Footer 
+1</footer>
+  </ru.stqa.pft.addressbook.model.GroupData>
+  <ru.stqa.pft.addressbook.model.GroupData>
+    <name>Group_Name 2</name>
+    <id>2147483647</id>
+    <header>Group_Header 
+2</header>
+    <footer>Group_Footer 
+2</footer>
+  </ru.stqa.pft.addressbook.model.GroupData>
+  <ru.stqa.pft.addressbook.model.GroupData>
+    <name>Group_Name 3</name>
+    <id>2147483647</id>
+    <header>Group_Header 
+3</header>
+    <footer>Group_Footer 
+3</footer>
+  </ru.stqa.pft.addressbook.model.GroupData>
+  <ru.stqa.pft.addressbook.model.GroupData>
+    <name>Group_Name 4</name>
+    <id>2147483647</id>
+    <header>Group_Header 
+4</header>
+    <footer>Group_Footer 
+4</footer>
+  </ru.stqa.pft.addressbook.model.GroupData>
+  <ru.stqa.pft.addressbook.model.GroupData>
+    <name>Group_Name 5</name>
+    <id>2147483647</id>
+    <header>Group_Header 
+5</header>
+    <footer>Group_Footer 
+5</footer>
+  </ru.stqa.pft.addressbook.model.GroupData>
+  <ru.stqa.pft.addressbook.model.GroupData>
+    <name>Group_Name 6</name>
+    <id>2147483647</id>
+    <header>Group_Header 
+6</header>
+    <footer>Group_Footer 
+6</footer>
+  </ru.stqa.pft.addressbook.model.GroupData>
+  <ru.stqa.pft.addressbook.model.GroupData>
+    <name>Group_Name 7</name>
+    <id>2147483647</id>
+    <header>Group_Header 
+7</header>
+    <footer>Group_Footer 
+7</footer>
+  </ru.stqa.pft.addressbook.model.GroupData>
+  <ru.stqa.pft.addressbook.model.GroupData>
+    <name>Group_Name 8</name>
+    <id>2147483647</id>
+    <header>Group_Header 
+8</header>
+    <footer>Group_Footer 
+8</footer>
+  </ru.stqa.pft.addressbook.model.GroupData>
+  <ru.stqa.pft.addressbook.model.GroupData>
+    <name>Group_Name 9</name>
+    <id>2147483647</id>
+    <header>Group_Header 
+9</header>
+    <footer>Group_Footer 
+9</footer>
+  </ru.stqa.pft.addressbook.model.GroupData>
+  <ru.stqa.pft.addressbook.model.GroupData>
+    <name>Group_Name 10</name>
+    <id>2147483647</id>
+    <header>Group_Header 
+10</header>
+    <footer>Group_Footer 
+10</footer>
+  </ru.stqa.pft.addressbook.model.GroupData>
+</list>
