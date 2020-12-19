@@ -36,9 +36,17 @@ public class ContactHelper extends HelperBase {
   public void addNewContact() {
     click(By.linkText("add new"));
   }
-  public void editContact() {
+  /* public void editContact() {
     click(By.xpath("(//img[@alt='Edit'])"));
 
+  } */
+
+  public void editContact(int index) {
+    wd.findElements(By.xpath("//img[@alt='Edit']")).get(index).click();
+  }
+
+  private void editContactModificationById(int id) {
+    wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
   }
 
   public void updateContact() {
@@ -71,8 +79,8 @@ public class ContactHelper extends HelperBase {
   }
 
   public void modifyContact(ContactData contact) {
-    selectContactById(contact.getId());
-    editContact();
+ //   selectContactById(contact.getId());
+    editContactModificationById(contact.getId());
     fillContactForm(contact, false);
     updateContact();
     contactCache = null;
