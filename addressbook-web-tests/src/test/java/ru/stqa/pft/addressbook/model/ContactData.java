@@ -69,6 +69,18 @@ public class ContactData {
     return this;
   }
 
+  public String getHomePhone() {
+    return home;
+  }
+
+  public String getMobilePhone() {
+    return mobile;
+  }
+
+  public String getWorkPhone() {
+    return work;
+  }
+
   public ContactData withHomePhone(String home) {
     this.home = home;
     return this;
