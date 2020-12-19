@@ -10,6 +10,9 @@ public class ContactData {
   private  String companyName;
   private  String email;
   private  String group;
+  private String home;
+  private String mobile;
+  private String work;
 
   public int getId() {
     return id;
@@ -66,6 +69,22 @@ public class ContactData {
     return this;
   }
 
+  public ContactData withHomePhone(String home) {
+    this.home = home;
+    return this;
+  }
+
+  public ContactData withMobilePhone(String mobile) {
+    this.mobile = mobile;
+    return this;
+  }
+
+  public ContactData withWorkPhone(String work) {
+    this.work = work;
+    return this;
+  }
+
+
   @Override
   public String toString() {
     return "ContactData{" +
@@ -87,4 +106,6 @@ public class ContactData {
   public int hashCode() {
     return Objects.hash(id, firstname, lastname);
   }
+
+
 }
