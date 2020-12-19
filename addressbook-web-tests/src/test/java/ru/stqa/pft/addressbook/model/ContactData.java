@@ -1,6 +1,7 @@
 
 package ru.stqa.pft.addressbook.model;
 
+import java.io.File;
 import java.util.Objects;
 
 public class ContactData {
@@ -17,6 +18,10 @@ public class ContactData {
   private String work;
   private String address;
   private String allPhones;
+  private File photo;
+  private String allEmail;
+
+  public File getPhoto() {    return photo;  }
 
   public String getAddress() {
     return address;
@@ -25,19 +30,6 @@ public class ContactData {
   public String getAllEmail() {
     return allEmail;
   }
-
-  private String allEmail;
-
-  public String getAllPhones() {
-    return allPhones;
-  }
-
-  public ContactData withAddress(String address) {
-    this.address = address;
-    return this;
-  }
-
-
 
   public int getId() {
     return id;
@@ -61,6 +53,41 @@ public class ContactData {
 
   public String getGroup() {
     return group;
+  }
+
+  public String getAllPhones() {
+    return allPhones;
+  }
+
+  public String getHomePhone() {
+    return home;
+  }
+
+  public String getMobilePhone() {
+    return mobile;
+  }
+
+  public String getWorkPhone() {
+    return work;
+  }
+
+  public String getEmail3() {
+    return email3;
+  }
+
+  public ContactData withEmail3(String email3) {
+    this.email3 = email3;
+    return this;
+  }
+
+  public ContactData withAddress(String address) {
+    this.address = address;
+    return this;
+  }
+
+  public ContactData withPhoto(File photo) {
+    this.photo = photo;
+    return this;
   }
 
   public ContactData withAllPhones(String allPhones) {
@@ -97,18 +124,6 @@ public class ContactData {
 
     this.id = id;
     return this;
-  }
-
-  public String getHomePhone() {
-    return home;
-  }
-
-  public String getMobilePhone() {
-    return mobile;
-  }
-
-  public String getWorkPhone() {
-    return work;
   }
 
   public ContactData withHomePhone(String home) {
@@ -163,12 +178,4 @@ public class ContactData {
     return this;
   }
 
-  public String getEmail3() {
-    return email3;
-  }
-
-  public ContactData withEmail3(String email3) {
-    this.email3 = email3;
-    return this;
-  }
 }
