@@ -46,6 +46,7 @@ public class ContactCreationTest extends TestBase{
     app.contact().fillContactForm(contact, true);
     app.contact().submitContactCreation();
     app.goToHome();
+    verifyGroupListInUI();
 /*        Contacts after = app.db().contacts();
     assertThat(after.size(), equalTo(before.size() + 1));
 

@@ -20,6 +20,21 @@ task testGroups (type: Test) {
     useTestNG() {
         suites 'src/test/resources/testng-groups.xml'
     }
+    if (project.hasProperty('browser')) {
+        systemProperty('browser', "${browser}")
+        // gradlew -Pbrowser=chrome testGroups  (системное свойство для запуска из терминала)
+    }
+
+    if (project.hasProperty('target')) {
+        systemProperty('target', "${target}")
+        // gradlew -Ptarget=local testGroups  (системное свойство для запуска из терминала)
+    }
+
+    if (project.hasProperty('verifyUI')) {
+        systemProperty('verifyUI', "${verifyUI}")
+        // gradlew -PverifyUI=true testGroups  (системное свойство для запуска из терминала)
+    }
+
 }
 
 task testContacts (type: Test) {
@@ -33,6 +48,11 @@ task testContacts (type: Test) {
 
     if (project.hasProperty('target')) {
         systemProperty('target', "${target}")
+        // gradlew -Ptarget=local testContacts  (системное свойство для запуска из терминала)
+    }
+
+    if (project.hasProperty('verifyUI')) {
+        systemProperty('verifyUI', "${verifyUI}")
         // gradlew -Ptarget=local testContacts  (системное свойство для запуска из терминала)
     }
 }
