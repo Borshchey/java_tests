@@ -74,7 +74,7 @@ public class ApplicationManager {
     return navigationHelper;
   }
 
-  public void goToHome() {
+  public void goToHomePage() {
     if (contactHelper.isElementPresent(By.id("maintable"))) {
       return;
     }

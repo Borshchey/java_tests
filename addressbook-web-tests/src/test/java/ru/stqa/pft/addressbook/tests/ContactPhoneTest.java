@@ -13,7 +13,7 @@ public class ContactPhoneTest extends TestBase{
 
   @Test
   public void testContactPhones() {
-    app.goToHome();
+    app.goToHomePage();
     ContactData contact = app.contact().all().iterator().next();
     ContactData contactInfoFromEditForm = app.contact().InfoFromEditForm(contact);
 
