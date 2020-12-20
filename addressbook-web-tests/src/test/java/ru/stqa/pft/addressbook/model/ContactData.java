@@ -11,25 +11,26 @@ import java.util.Objects;
 @XStreamAlias("contact")
 public class ContactData {
   @XStreamOmitField
-  private  int id = Integer.MAX_VALUE;
+  private int id = Integer.MAX_VALUE;
   @Expose
-  private  String firstname;
+  private String firstname;
   @Expose
-  private  String lastname;
+  private String lastname;
   @Expose
-  private  String companyName;
+  private String companyName;
   @Expose
-  private  String email;
+  private String email;
   @Expose
-  private  String email2;
-  private  String email3;
+  private String email2;
+  private String email3;
   @Expose
-  private  String group;
-  @Expose
+  private String group;
   private String home;
   @Expose
   private String mobile;
+  @Expose
   private String work;
+  @Expose
   private String address;
   private String allPhones;
   private File photo;

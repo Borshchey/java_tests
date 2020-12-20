@@ -1,17 +1,32 @@
 [
   {
-    "name": "Group_Name 1",
-    "header": "Group_Header \n1",
-    "footer": "Group_Footer \n1"
+    "firstname": "First_Name 1",
+    "lastname": "Last_Name 1",
+    "email": "mail_1@test.com",
+    "email2": "mail2_1@test.com",
+    "group": "Group_Name 1",
+    "mobile": "89001002030",
+    "work": "89001002030",
+    "address": "Some address 1"
   },
   {
-    "name": "Group_Name 2",
-    "header": "Group_Header \n2",
-    "footer": "Group_Footer \n2"
+    "firstname": "First_Name 2",
+    "lastname": "Last_Name 2",
+    "email": "mail_2@test.com",
+    "email2": "mail2_2@test.com",
+    "group": "Group_Name 1",
+    "mobile": "89001002030",
+    "work": "89001002030",
+    "address": "Some address 2"
   },
   {
-    "name": "Group_Name 3",
-    "header": "Group_Header \n3",
-    "footer": "Group_Footer \n3"
+    "firstname": "First_Name 3",
+    "lastname": "Last_Name 3",
+    "email": "mail_3@test.com",
+    "email2": "mail2_3@test.com",
+    "group": "Group_Name 1",
+    "mobile": "89001002030",
+    "work": "89001002030",
+    "address": "Some address 3"
   }
 ]
