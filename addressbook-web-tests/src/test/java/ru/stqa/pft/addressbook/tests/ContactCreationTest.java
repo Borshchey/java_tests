@@ -33,7 +33,7 @@ public class ContactCreationTest extends TestBase{
   @Test (dataProvider = "validContactsFromJson")
   public void testContactCreation(ContactData contact) throws Exception {
     app.goToHome();
-    Contacts before = app.contact().all();
+    Contacts before = app.db().contacts();
     app.contact().addNewContact();
  /*    File photo = new File("src/test/resources/img.png");
    ContactData contact = new ContactData()
@@ -46,7 +46,7 @@ public class ContactCreationTest extends TestBase{
     app.contact().fillContactForm(contact, true);
     app.contact().submitContactCreation();
     app.goToHome();
-/*    Contacts after = app.contact().all();
+/*        Contacts after = app.db().contacts();
     assertThat(after.size(), equalTo(before.size() + 1));
 
     assertThat(after, equalTo(
