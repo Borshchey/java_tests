@@ -4,47 +4,76 @@ package ru.stqa.pft.addressbook.model;
 import com.google.gson.annotations.Expose;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
-
+import org.hibernate.annotations.Type;
+import javax.persistence.*;
 import java.io.File;
 import java.util.Objects;
 
 @XStreamAlias("contact")
+@Entity
+@Table(name = "addressbook")
 public class ContactData {
+
   @XStreamOmitField
+  @Id
+  @Column(name = "id")
   private int id = Integer.MAX_VALUE;
+
   @Expose
+  @Column(name = "firstname")
   private String firstname;
+
   @Expose
+  @Column(name = "lastname")
   private String lastname;
+
   @Expose
   private String companyName;
+
   @Expose
   private String email;
+
   @Expose
   private String email2;
   private String email3;
+
   @Expose
+  @Transient //не будет извлекаться их БД
   private String group;
+
+  @Expose
+  @Column(name = "home")
+  @Type(type = "text")
   private String home;
+
   @Expose
+  @Column(name = "mobile")
+  @Type(type = "text")
   private String mobile;
+
   @Expose
+  @Column(name = "work")
+  @Type(type = "text")
   private String work;
+
   @Expose
   private String address;
+
+  @Transient
   private String allPhones;
-  private File photo;
+
+  @Column(name = "photo")
+  @Type(type = "text")
+  private String photo;
   private String allEmail;
 
-  public File getPhoto() {    return photo;  }
+  public File getPhoto() { return new File (photo);  }
 
   public String getAddress() {
     return address;
   }
 
-  public String getAllEmail() {
-    return allEmail;
-  }
+  public String getAllEmail() { return allEmail;  }
 
   public int getId() {
     return id;
@@ -90,6 +119,15 @@ public class ContactData {
     return email3;
   }
 
+  public String getEmail2() {
+    return email2;
+  }
+
+  public ContactData withEmail2(String email2) {
+    this.email2 = email2;
+    return this;
+  }
+
   public ContactData withEmail3(String email3) {
     this.email3 = email3;
     return this;
@@ -101,7 +139,7 @@ public class ContactData {
   }
 
   public ContactData withPhoto(File photo) {
-    this.photo = photo;
+    this.photo = photo.getPath();
     return this;
   }
 
@@ -182,15 +220,6 @@ public class ContactData {
   @Override
   public int hashCode() {
     return Objects.hash(id, firstname, lastname);
-  }
-
-  public String getEmail2() {
-    return email2;
-  }
-
-  public ContactData withEmail2(String email2) {
-    this.email2 = email2;
-    return this;
   }
 
 }
