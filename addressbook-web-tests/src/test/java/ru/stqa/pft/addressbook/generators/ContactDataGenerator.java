@@ -65,8 +65,8 @@ public class ContactDataGenerator {
                 .withMobilePhone("89001002030")
                 .withWorkPhone("89001002030")
                 .withEmail(String.format("mail_%s@test.com", i + 1))
-                .withEmail2(String.format("mail2_%s@test.com", i + 1))
-                .withGroup("Group_Name 1"));
+                .withEmail2(String.format("mail2_%s@test.com", i + 1)));
+                //.withGroup("Group_Name 1"));
       }
       return contacts;
     }
