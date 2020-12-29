@@ -7,6 +7,7 @@ import ru.stqa.pft.mantis.appmanager.ApplicationManager;
 import java.io.File;
 
 
+
 public class TestBase {
 
 

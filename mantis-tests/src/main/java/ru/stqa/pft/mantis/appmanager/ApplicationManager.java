@@ -19,6 +19,8 @@ public class ApplicationManager {
   private RegistrationHelper registrationHelper;
   private FtpHelper ftp;
   private MailHelper mailHelper;
+  private DbHelper dbHelper;
+  private ChangePasswordHelper changePasswordHelper;
 
 
   public ApplicationManager(String browser) {
@@ -85,4 +87,19 @@ public class ApplicationManager {
     }
     return mailHelper;
   }
+
+  public DbHelper db() {
+    if (dbHelper == null) {
+      dbHelper = new DbHelper(this);
+    }
+    return dbHelper;
+  }
+
+  public ChangePasswordHelper changePassword() {
+    if (changePasswordHelper == null) {
+      changePasswordHelper = new ChangePasswordHelper(this);
+    }
+    return changePasswordHelper;
+  }
+
 }
