@@ -3,7 +3,6 @@ package ru.stqa.pft.mantis.tests;
 import org.testng.annotations.Test;
 import ru.stqa.pft.mantis.model.Issue;
 import ru.stqa.pft.mantis.model.Project;
-
 import javax.xml.rpc.ServiceException;
 import java.net.MalformedURLException;
 import java.rmi.RemoteException;
@@ -30,8 +29,12 @@ public class SoapTests extends TestBase {
                 .withDescription("Test issue description")
                 .withProject(projects.iterator().next());
         Issue created = app.soap().addIssue(issue);
-        // Сравнение объектов модельного и созданного
         assertEquals(issue.getSummary(), created.getSummary());
 
+    }
+
+    @Test(enabled = false)
+    public void testSkipIsNotFixed() throws RemoteException, ServiceException, MalformedURLException {
+        skipIfNotFixed(1);
     }
 }
