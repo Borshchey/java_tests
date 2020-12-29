@@ -6,16 +6,18 @@ import static org.testng.Assert.assertTrue;
 
 public class GeoIpServiceTests {
 
-    @Test
+  /*  @Test (enabled = false)
     public void testMyIp() {
         String ipLocation = new GeoIPService().getGeoIPServiceSoap12().getIpLocation("92.38.68.110");
         assertTrue(ipLocation.contains("RUS"));
     }
 
-    @Test
+    @Test (enabled = false)
     public void testInvalidIp() {
         String ipLocation = new GeoIPService().getGeoIPServiceSoap12().getIpLocation("92.38.68.xxx");
         assertTrue(ipLocation.contains("US"));
     }
+
+   */
 }
 
