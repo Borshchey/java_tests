@@ -25,6 +25,10 @@ task testGroups (type: Test) {
         // gradlew -Pbrowser=chrome testGroups  (системное свойство для запуска из терминала)
     }
 
+    if (project.hasProperty('platform')) {
+        systemProperty 'platform', "${platform}"
+    }    
+
     if (project.hasProperty('target')) {
         systemProperty('target', "${target}")
         // gradlew -Ptarget=local testGroups  (системное свойство для запуска из терминала)
@@ -45,6 +49,10 @@ task testContacts (type: Test) {
         systemProperty('browser', "${browser}")
         // gradlew -Pbrowser=chrome testContacts  (системное свойство для запуска из терминала)
     }
+
+    if (project.hasProperty('platform')) {
+        systemProperty 'platform', "${platform}"
+    }    
 
     if (project.hasProperty('target')) {
         systemProperty('target', "${target}")
