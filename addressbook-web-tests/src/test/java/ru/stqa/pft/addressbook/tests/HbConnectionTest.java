@@ -38,14 +38,14 @@ public class HbConnectionTest {
     Session session = sessionFactory.openSession();
     session.beginTransaction();
     //для групп:
-    //List<GroupData> result = session.createQuery("from GroupData").list();
-    //for (GroupData group : result) {
-    //  System.out.println(group);
+    List<GroupData> result = session.createQuery("from GroupData").list();
+    for (GroupData group : result) {
+      System.out.println(group);
       //для контактов:
-       List<ContactData> result = session.createQuery("from ContactData").list();
-       for (ContactData contact : result) {
-         System.out.println(contact);
-         System.out.println(contact.getGroups());
+      // List<ContactData> result = session.createQuery("from ContactData").list();
+       //for (ContactData contact : result) {
+        // System.out.println(contact);
+         //System.out.println(contact.getGroups());
     }
     session.getTransaction().commit();
     session.close();
