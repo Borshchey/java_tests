@@ -73,7 +73,7 @@ public class GroupCreationTests extends TestBase {
     verifyGroupListInUI();
   }
 
-  @Test
+  @Test (enabled = false)
   public void testBadGroupCreation() throws Exception {
     app.goTo().groupPage();
     Groups before = app.db().groups();
