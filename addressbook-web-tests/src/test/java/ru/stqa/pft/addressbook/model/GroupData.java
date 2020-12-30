@@ -21,8 +21,7 @@ public class GroupData {
 
   @Expose
   @Column(name = "group_name")
-  @Type(type = "text")
-  private  String name;
+  private String name;
 
   @Expose
   @Column(name = "group_header")
