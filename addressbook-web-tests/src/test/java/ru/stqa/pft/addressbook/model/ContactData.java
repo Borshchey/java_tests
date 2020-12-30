@@ -31,14 +31,21 @@ public class ContactData {
   @Column(name = "lastname")
   private String lastname;
 
-  @Expose
+  @Transient
+  @Column(name = "company")
+  @Type(type = "text")
   private String companyName;
 
   @Expose
+  @Column(name = "email")
+  @Type(type = "text")
   private String email;
 
   @Expose
+  @Type(type = "text")
   private String email2;
+  @Column(name = "email3")
+  @Type(type = "text")
   private String email3;
 
  /* @Expose
@@ -64,6 +71,7 @@ public class ContactData {
   private String work;
 
   @Expose
+  @Type(type = "text")
   private String address;
 
   @Transient
@@ -72,6 +80,8 @@ public class ContactData {
   @Column(name = "photo")
   @Type(type = "text")
   private String photo;
+
+  @Transient
   private String allEmail;
 
   public File getPhoto() { return new File (photo);  }
